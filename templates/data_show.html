@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+<div class="container">
+    <h2>Basic Table</h2>
+    <p>The .table class adds basic styling (light padding and only horizontal dividers) to a table:</p>            
+    <a href="{{ url_for('predict_form') }}" class="btn btn-info" role="button">Prediksi</a>
+    <table class="table">
+      <thead>
+        <tr>
+          <th>X</th>
+          <th>Y</th>
+          <th>X2</th>
+          <th>Y2</th>
+          <th>XY</th>
+          <th>APE</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr>
+            <td>{{ x }}</td>
+            <td>{{ y }}</td>
+            <td>{{ x2 }}</td>
+            <td>{{ y2 }}</td>
+            <td>{{ xy }}</td>
+            <td>{{ ape }}</td>
+          </tr>
+      </tbody>
+      <tbody>
+        <tr>
+          <td><b>{{ x_sum }}</b></td>
+          <td><b>{{ y_sum }}</b></td>
+          <td><b>{{ x2_sum }}</b></td>
+          <td><b>{{ y2_sum }}</b></td>
+          <td><b>{{ xy_sum }}</b></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <b>Hasil diperoleh selama {{ sub }} ialah: {{ w }}</b>
+  <br>
+  <b>MAPE: {{ o }}</b>
+  </body>
+</html>
